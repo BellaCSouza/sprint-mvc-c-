@@ -3,13 +3,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVCProject.Models
 {
-    [Table("TB_USUARIO")]
+    [Table("tb_usuario")]
     public class Usuario
     {
         [Display(Name = "Código")]
-        public int Id { get; set; }
-        public string Nome { get; set; }
+        [Column("id_usuario")]
+        public int ID { get; set; }
+
+        [Display(Name = "Email")]
+        [Column("email_usuario")]
+        public string Email { get; set; }
+
+        [Display(Name = "Senha")]
+        [Column("senha_usuario")]
+        public string Senha { get; set; }
     }
 
-    
+
 }
